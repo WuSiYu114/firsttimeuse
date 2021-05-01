@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>DICE</h1>
+<p id="date"></p>
+<img id="roll_gif" src="rolling.gif" style="width:200px">
+
+<button onclick="roll_dice()">ROLL</button>
+
+<p id="point"></p>
+<script>
+    function roll_dice() {
+
+        var s = ["n1.png","n2.png","n3.png","n4.png","n5.png","n6.png"];
+        var point=Math.floor(Math.random() * 6);
+
+        document.getElementById("point").innerHTML = point + 1;
+        document.getElementById('roll_gif').src=s [ point ];
+    }
+    var d=new Date();
+    document.getElementById("date").innerHTML=d.getMonth()+1+"月"+d.getDate()+"日";
+    
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
